@@ -1,9 +1,7 @@
 import Script from "next/script";
 
-// Reads the container ID from env so no secret is hard-coded.
-// Set NEXT_PUBLIC_GTM_ID=GTM-XXXXXXX (locally in .env.local, and in Vercel
-// project env). With it unset, nothing renders, safe for dev/preview.
-export const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+// Google Tag Manager container ID (public client-side ID, safe to hard-code).
+export const GTM_ID = "GTM-KZJFBG68";
 
 export function GoogleTagManager() {
   if (!GTM_ID) return null;
