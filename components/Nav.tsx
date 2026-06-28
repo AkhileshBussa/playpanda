@@ -2,19 +2,21 @@ import Image from "next/image";
 import { Button } from "./Button";
 import { WHATSAPP_LINK } from "@/lib/links";
 
+// Root-relative hashes so the nav works from any route (blog pages included).
 const links = [
-  { href: "#zones", label: "Play" },
-  { href: "#birthdays", label: "Birthdays" },
-  { href: "#food", label: "Food" },
-  { href: "#parents", label: "For Parents" },
-  { href: "#visit", label: "Visit" },
+  { href: "/#zones", label: "Play" },
+  { href: "/birthday-parties", label: "Birthdays" },
+  { href: "/#food", label: "Food" },
+  { href: "/school-partnerships", label: "Schools" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#visit", label: "Visit" },
 ];
 
 export function Nav() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-cream/80 bg-cream/95 border-b border-ink/5">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-28 sm:h-32 flex items-center justify-between">
-        <a href="#top" className="flex items-center gap-2 shrink-0">
+        <a href="/" className="flex items-center gap-2 shrink-0">
           <Image
             src="/LogoWithoutBG.png"
             alt="Play Panda"
