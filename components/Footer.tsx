@@ -4,6 +4,8 @@ import {
   MAPS_LINK,
   PHONE_DISPLAY,
   PHONE_TEL,
+  INSTAGRAM_LINK,
+  INSTAGRAM_HANDLE,
 } from "@/lib/links";
 
 export function Footer() {
@@ -33,11 +35,14 @@ export function Footer() {
               Explore
             </h4>
             <ul className="mt-4 space-y-2 text-cream/80">
-              <li><a href="#zones" className="hover:text-coral">The 9 zones</a></li>
-              <li><a href="#birthdays" className="hover:text-coral">Birthdays</a></li>
-              <li><a href="#food" className="hover:text-coral">Food court</a></li>
-              <li><a href="#parents" className="hover:text-coral">For parents</a></li>
-              <li><a href="#visit" className="hover:text-coral">Visit us</a></li>
+              <li><a href="/#zones" className="hover:text-coral">The 9 zones</a></li>
+              <li><a href="/birthday-parties" className="hover:text-coral">Birthdays</a></li>
+              <li><a href="/#food" className="hover:text-coral">Food court</a></li>
+              <li><a href="/#parents" className="hover:text-coral">For parents</a></li>
+              <li><a href="/blog" className="hover:text-coral">Blog</a></li>
+              <li><a href="/school-partnerships" className="hover:text-coral">For schools</a></li>
+              <li><a href="/franchise" className="hover:text-coral">Franchise</a></li>
+              <li><a href="/#visit" className="hover:text-coral">Visit us</a></li>
             </ul>
           </div>
 
@@ -57,6 +62,11 @@ export function Footer() {
               <li>
                 <a href={MAPS_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-coral">
                   📍 Find us on Maps
+                </a>
+              </li>
+              <li>
+                <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-coral">
+                  📷 @{INSTAGRAM_HANDLE}
                 </a>
               </li>
             </ul>
