@@ -16,10 +16,8 @@ export const BUSINESS = {
 
   streetAddress:
     "3rd Floor, NRR Square, Kismatpur Rd, beside Vignan Junior College, Sri Venkateshwara Colony",
-  // TODO(owner): fill before launch.
   pincode: "500086",
-  nearbyAreas: "[NEARBY AREAS]",
-  openingHours: "[OPENING HOURS e.g. Mo-Su 10:00-21:00]",
+  // TODO(owner): fill before launch.
   latitude: "[LATITUDE]",
   longitude: "[LONGITUDE]",
 

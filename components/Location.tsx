@@ -62,17 +62,9 @@ export function Location() {
             <h3 className="font-display font-black text-2xl text-ink">Find us</h3>
             <address className="mt-3 not-italic text-ink/80 text-lg leading-relaxed">
               {BUSINESS.streetAddress}, Bandlaguda Jagir, Hyderabad – {BUSINESS.pincode}
-              <br />
-              <span className="text-ink/60 text-base">
-                Also easy to reach from {BUSINESS.nearbyAreas}.
-              </span>
             </address>
 
             <dl className="mt-6 space-y-2 text-ink/80">
-              <div className="flex gap-2">
-                <dt className="font-display font-bold">Hours:</dt>
-                <dd>{BUSINESS.openingHours}</dd>
-              </div>
               <div className="flex gap-2">
                 <dt className="font-display font-bold">Parking &amp; entry:</dt>
                 <dd>Free parking · pram-friendly, easy entry</dd>
