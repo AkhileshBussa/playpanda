@@ -1,5 +1,6 @@
 // JSON-LD builders. All values stay consistent with lib/business.ts (spec §2, §7).
-import { SITE_URL, BUSINESS, RATING } from "./business";
+import { SITE_URL, BUSINESS, RATING, AMENITIES } from "./business";
+import { AREAS } from "./areas";
 import { REVIEWS } from "./reviews";
 import { INSTAGRAM_LINK } from "./links";
 import type { Crumb } from "@/components/Breadcrumbs";
@@ -107,6 +108,11 @@ export function localBusinessSchema() {
     "@type": "EntertainmentBusiness",
     "@id": `${SITE_URL}/#business`,
     name: BUSINESS.name,
+    alternateName: BUSINESS.legalListingName,
+    additionalType: [
+      "https://en.wikipedia.org/wiki/Indoor_playground",
+      "https://en.wikipedia.org/wiki/Playground",
+    ],
     description:
       "Indoor, screen-free children's play zone in Bandlaguda Jagir, Hyderabad. 10,000 sq. ft. across 9 themed zones, with a party hall, kid-friendly food court and parent workstation.",
     url: `${SITE_URL}/`,
@@ -148,7 +154,20 @@ export function localBusinessSchema() {
     }),
     hasMap: "https://maps.app.goo.gl/uujpj3phdAMPyr3S7",
     openingHours: BUSINESS.openingHours,
-    areaServed: "Hyderabad",
+    isAccessibleForFree: false,
+    publicAccess: true,
+    amenityFeature: AMENITIES.map((name) => ({
+      "@type": "LocationFeatureSpecification",
+      name,
+      value: true,
+    })),
+    areaServed: [
+      { "@type": "City", name: "Hyderabad" },
+      ...AREAS.map((a) => ({
+        "@type": "Place",
+        name: `${a.name}, Hyderabad`,
+      })),
+    ],
     sameAs: [INSTAGRAM_LINK],
   };
 }

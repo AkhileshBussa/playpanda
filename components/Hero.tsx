@@ -29,9 +29,10 @@ export function Hero() {
             </h1>
 
             <p className="animate-reveal hero-seq mt-6 max-w-xl mx-auto lg:mx-0 text-lg sm:text-xl text-ink/75 leading-relaxed" style={{ "--i": 4 } as React.CSSProperties}>
-              10,000 sq. ft. of imagination-first indoor play. Nine themed zones, a
-              party hall, a kid-friendly food court, and a comfy corner where parents
-              can stay close while the little ones go big.
+              Hyderabad&apos;s 10,000 sq. ft. indoor kids play zone, in Bandlaguda
+              Jagir. Nine themed play areas, a birthday party hall, a kid-friendly food
+              court, and a comfy corner where parents can stay close while the little
+              ones go big.
             </p>
 
             <div className="animate-reveal hero-seq mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4" style={{ "--i": 5 } as React.CSSProperties}>

@@ -37,6 +37,8 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-cream/80">
               <li><a href="/#zones" className="hover:text-coral">The 9 zones</a></li>
               <li><a href="/birthday-parties" className="hover:text-coral">Birthdays</a></li>
+              <li><a href="/pricing" className="hover:text-coral">Prices &amp; tickets</a></li>
+              <li><a href="/kids-play-zone" className="hover:text-coral">Kids play zone near you</a></li>
               <li><a href="/#food" className="hover:text-coral">Food court</a></li>
               <li><a href="/#parents" className="hover:text-coral">For parents</a></li>
               <li><a href="/blog" className="hover:text-coral">Blog</a></li>

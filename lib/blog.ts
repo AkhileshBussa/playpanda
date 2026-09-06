@@ -26,6 +26,7 @@ import kidsPlayZoneChecklist from "./posts/kids-play-zone-checklist";
 import indoorVsPark from "./posts/indoor-play-area-vs-childrens-park";
 import screenFreePlay from "./posts/screen-free-play-benefits";
 import nineZonesGuide from "./posts/9-play-zones-guide";
+import toddlerPlayArea from "./posts/toddler-play-area-hyderabad";
 
 const ALL: PostModule[] = [
   bestKidsPlayZone,
@@ -33,6 +34,7 @@ const ALL: PostModule[] = [
   indoorVsPark,
   screenFreePlay,
   nineZonesGuide,
+  toddlerPlayArea,
 ];
 
 // Newest first.

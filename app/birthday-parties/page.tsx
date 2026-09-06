@@ -35,9 +35,9 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "Kids' Birthday Party Packages in Bandlaguda Jagir, Hyderabad | Play Panda",
+  title: "Kids Birthday Party Places & Venues in Hyderabad | Play Panda",
   description:
-    "Host your child's birthday at Play Panda: 10,000 sq ft of screen-free play, a dedicated coordinator, and décor packages for groups up to 70. One price for kids & adults. Book a visit today.",
+    "Looking for kids birthday party places near you in Hyderabad? Play Panda in Bandlaguda Jagir has a party hall, a dedicated coordinator, décor packages and 9 play zones for groups up to 70. One price for kids & adults.",
   alternates: { canonical: "/birthday-parties" },
   openGraph: {
     title: "Kids' Birthday Party Packages in Hyderabad | Play Panda",

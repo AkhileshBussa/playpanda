@@ -6,6 +6,7 @@ export const SITE_URL = "https://theplaypanda.com";
 
 export const BUSINESS = {
   name: "Play Panda",
+  legalListingName: "Play Panda Kids Play Area & Birthday Party Venue",
   what: "Indoor, screen-free children's play zone",
   locality: "Bandlaguda Jagir",
   city: "Hyderabad",
@@ -17,7 +18,8 @@ export const BUSINESS = {
   pincode: "500086",
   latitude: "17.3582013",
   longitude: "78.3881378",
-  nearbyAreas: "Kismatpur, Manikonda, Narsingi, Gandipet and Tellapur",
+  nearbyAreas:
+    "Kismatpur, Rajendranagar, Attapur, Manikonda, Narsingi, Gandipet, Tolichowki, Mehdipatnam and Shamshabad",
   // Human-readable for the page; schema form (schema.org openingHours) below.
   openingHoursDisplay: "Mon–Thu: 11 AM – 9 PM · Fri–Sun: 11 AM – 10 PM",
   openingHours: ["Mo-Th 11:00-21:00", "Fr-Su 11:00-22:00"],
