@@ -5,6 +5,7 @@ import {
   GoogleTagManagerNoScript,
 } from "@/components/GoogleTagManager";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { ConversionTracking } from "@/components/ConversionTracking";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://theplaypanda.com"),
@@ -36,6 +37,7 @@ export default function RootLayout({
         <GoogleTagManager />
         <GoogleTagManagerNoScript />
         <GoogleAnalytics />
+        <ConversionTracking />
         {children}
       </body>
     </html>

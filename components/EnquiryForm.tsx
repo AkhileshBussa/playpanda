@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { WHATSAPP_NUMBER } from "@/lib/links";
+import { trackEvent, CONVERSION_EVENTS } from "@/lib/analytics";
 
 // No backend: composes a pre-filled WhatsApp message from the fields and opens
 // the chat. This matches where enquiries already come from (spec §6).
@@ -26,6 +27,7 @@ export function EnquiryForm() {
       `Day: ${get("day")}`,
     ].join("\n");
 
+    trackEvent(CONVERSION_EVENTS.formSubmit, { form_name: "birthday_enquiry" });
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank", "noopener,noreferrer");
     setSent(true);
