@@ -1,8 +1,6 @@
 // Single source of truth for Play Panda business facts (spec §2).
 // Keep these consistent across every page, consistency is itself an SEO + GEO signal.
-//
-// ⚠️ PLACEHOLDERS: fill the values marked TODO before launch. Only the owner has them.
-// They are wired into on-page text AND JSON-LD schema, so set them once here.
+// Wired into on-page text AND JSON-LD schema, so set values once here.
 
 export const SITE_URL = "https://theplaypanda.com";
 
@@ -16,12 +14,13 @@ export const BUSINESS = {
 
   streetAddress:
     "3rd Floor, NRR Square, Kismatpur Rd, beside Vignan Junior College, Sri Venkateshwara Colony",
-  // TODO(owner): fill before launch.
   pincode: "500086",
-  nearbyAreas: "[NEARBY AREAS]",
-  openingHours: "[OPENING HOURS e.g. Mo-Su 10:00-21:00]",
-  latitude: "[LATITUDE]",
-  longitude: "[LONGITUDE]",
+  latitude: "17.3582013",
+  longitude: "78.3881378",
+  nearbyAreas: "Kismatpur, Manikonda, Narsingi, Gandipet and Tellapur",
+  // Human-readable for the page; schema form (schema.org openingHours) below.
+  openingHoursDisplay: "Mon–Thu: 11 AM – 9 PM · Fri–Sun: 11 AM – 10 PM",
+  openingHours: ["Mo-Th 11:00-21:00", "Fr-Su 11:00-22:00"],
 
   sqft: "10,000 sq. ft.",
   zoneCount: 9,

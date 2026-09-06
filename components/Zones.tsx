@@ -1,19 +1,20 @@
 import { ZONES } from "@/lib/zones";
+import { Reveal } from "./Reveal";
 
 export function Zones() {
   return (
-    <section id="zones" className="relative py-20 sm:py-28">
+    <Reveal as="section" id="zones" className="relative py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="max-w-2xl">
-          <p className="font-display font-bold text-coral uppercase tracking-widest text-sm">
+          <p className="reveal-item font-display font-bold text-coral uppercase tracking-widest text-sm" style={{ "--i": 0 } as React.CSSProperties}>
             The play zones
           </p>
-          <h2 className="mt-3 font-display font-black text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
+          <h2 className="reveal-item mt-3 font-display font-black text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]" style={{ "--i": 1 } as React.CSSProperties}>
             Nine little worlds.
             <br />
             One big afternoon.
           </h2>
-          <p className="mt-5 text-lg text-ink/70 max-w-xl">
+          <p className="reveal-item mt-5 text-lg text-ink/70 max-w-xl" style={{ "--i": 2 } as React.CSSProperties}>
             Each zone is built around a different way to play. From quiet, sensory
             corners to splashy, climby, run-around adventures.
           </p>
@@ -23,8 +24,8 @@ export function Zones() {
           {ZONES.map((z, i) => (
             <li
               key={z.name}
-              className={`group relative ${z.bg} ${z.ink} rounded-chunk p-7 sm:p-8 shadow-chunk hover:shadow-chunkHover hover:-translate-y-1 transition-all duration-300`}
-              style={{ transform: `rotate(${(i % 3) - 1 === 0 ? 0 : (i % 3) - 1 > 0 ? 0.4 : -0.4}deg)` }}
+              className={`reveal-item group relative ${z.bg} ${z.ink} rounded-chunk p-7 sm:p-8 shadow-chunk hover:shadow-chunkHover hover:-translate-y-1 transition-all duration-300`}
+              style={{ "--i": 3 + i, transform: `rotate(${(i % 3) - 1 === 0 ? 0 : (i % 3) - 1 > 0 ? 0.4 : -0.4}deg)` } as React.CSSProperties}
             >
               <div className="flex items-center justify-between">
                 <span className="inline-flex items-center justify-center h-10 w-10 rounded-pill bg-ink/15 text-2xl">
@@ -42,6 +43,6 @@ export function Zones() {
           ))}
         </ul>
       </div>
-    </section>
+    </Reveal>
   );
 }

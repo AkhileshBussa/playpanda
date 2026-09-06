@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { SchoolForm } from "@/components/SchoolForm";
 import { StickyContactBar } from "@/components/StickyContactBar";
 import { Bunting, ScallopBottom } from "@/components/PartyDecor";
+import { Reveal } from "@/components/Reveal";
 import {
   WHATSAPP_SCHOOL_LINK,
   PHONE_DISPLAY,
@@ -65,18 +66,18 @@ export default function SchoolPartnerships() {
       {/* Hero */}
       <section className="relative bg-coral text-cream overflow-hidden">
         <Bunting />
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 text-center">
-          <p className="font-display font-bold uppercase tracking-widest text-cream/80 text-sm">
+        <Reveal className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 text-center">
+          <p className="reveal-item font-display font-bold uppercase tracking-widest text-cream/80 text-sm" style={{ "--i": 0 } as React.CSSProperties}>
             For preschools &amp; schools nearby
           </p>
-          <h1 className="mt-3 font-display font-black text-4xl sm:text-6xl lg:text-7xl leading-[1.03]">
+          <h1 className="reveal-item mt-3 font-display font-black text-4xl sm:text-6xl lg:text-7xl leading-[1.03]" style={{ "--i": 1 } as React.CSSProperties}>
             A play world your students will love
           </h1>
-          <p className="mt-5 text-xl text-cream/95 max-w-2xl mx-auto">
+          <p className="reveal-item mt-5 text-xl text-cream/95 max-w-2xl mx-auto" style={{ "--i": 2 } as React.CSSProperties}>
             An indoor play &amp; party space built entirely for kids, and a warm new
             partner for your school.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="reveal-item mt-8 flex flex-wrap justify-center gap-3" style={{ "--i": 3 } as React.CSSProperties}>
             <a
               href="#enquire"
               className="inline-flex items-center justify-center gap-2 rounded-pill px-7 py-3.5 font-display font-black text-lg bg-cream text-coral shadow-[0_6px_0_rgba(0,0,0,0.18)] active:translate-y-[2px] transition-all hover:brightness-105"
@@ -92,7 +93,7 @@ export default function SchoolPartnerships() {
               💬 WhatsApp us
             </a>
           </div>
-        </div>
+        </Reveal>
         <ScallopBottom className="text-cream" />
       </section>
 

@@ -26,7 +26,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Mark JS as available before paint so reveal-on-scroll can hide
+            content up front without hiding it from no-JS clients / crawlers. */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
       <body>
         <GoogleTagManager />
         <GoogleTagManagerNoScript />

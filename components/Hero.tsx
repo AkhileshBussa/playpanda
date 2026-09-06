@@ -1,35 +1,40 @@
-import Image from "next/image";
 import { Button } from "./Button";
+import { HeroPandaStage } from "./HeroPandaStage";
 import { WHATSAPP_LINK, MAPS_LINK } from "@/lib/links";
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden">
+    <section id="top" className="hero-fold relative overflow-hidden">
       {/* playful brand blobs */}
-      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-yellow/40 blur-3xl" aria-hidden />
-      <div className="pointer-events-none absolute top-40 right-0 h-72 w-72 rounded-full bg-teal/30 blur-3xl" aria-hidden />
-      <div className="pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-pink/30 blur-3xl" aria-hidden />
+      <div className="animate-blob-in pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-yellow/40 blur-3xl" aria-hidden />
+      <div className="animate-blob-in pointer-events-none absolute top-40 right-0 h-72 w-72 rounded-full bg-teal/30 blur-3xl" style={{ animationDelay: "0.15s" }} aria-hidden />
+      <div className="animate-blob-in pointer-events-none absolute bottom-0 left-1/3 h-72 w-72 rounded-full bg-pink/30 blur-3xl" style={{ animationDelay: "0.3s" }} aria-hidden />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-12 pb-16 sm:pt-20 sm:pb-24 lg:pt-24 lg:pb-32">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          <div className="lg:col-span-7">
-            <span className="inline-flex items-center gap-2 rounded-pill bg-yellow/80 px-4 py-1.5 font-display font-bold text-ink text-sm">
+          <div className="order-2 lg:order-1 lg:col-span-7 text-center lg:text-left">
+            <span className="animate-reveal hero-seq inline-flex items-center gap-2 rounded-pill bg-yellow/80 px-4 py-1.5 font-display font-bold text-ink text-sm" style={{ "--i": 1 } as React.CSSProperties}>
               <span className="h-2 w-2 rounded-full bg-coral" /> A world built for wonder
             </span>
 
             <h1 className="mt-5 font-display font-black tracking-tight text-ink text-5xl sm:text-6xl lg:text-7xl leading-[0.95]">
-              Screens off.
-              <br />
-              <span className="text-coral">Imagination</span> on.
+              <span className="block overflow-hidden pb-[0.15em] -mb-[0.15em]">
+                <span className="block animate-rise hero-seq" style={{ "--i": 2 } as React.CSSProperties}>Screens off.</span>
+              </span>
+              <span className="block overflow-hidden pb-[0.15em] -mb-[0.15em]">
+                <span className="block animate-rise hero-seq" style={{ "--i": 3 } as React.CSSProperties}>
+                  <span className="text-coral">Imagination</span> on.
+                </span>
+              </span>
             </h1>
 
-            <p className="mt-6 max-w-xl text-lg sm:text-xl text-ink/75 leading-relaxed">
+            <p className="animate-reveal hero-seq mt-6 max-w-xl mx-auto lg:mx-0 text-lg sm:text-xl text-ink/75 leading-relaxed" style={{ "--i": 4 } as React.CSSProperties}>
               10,000 sq. ft. of imagination-first indoor play. Nine themed zones, a
               party hall, a kid-friendly food court, and a comfy corner where parents
               can stay close while the little ones go big.
             </p>
 
-            <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+            <div className="animate-reveal hero-seq mt-8 flex flex-wrap justify-center lg:justify-start gap-3 sm:gap-4" style={{ "--i": 5 } as React.CSSProperties}>
               <Button href={WHATSAPP_LINK} variant="coral" external>
                 Plan a visit
               </Button>
@@ -39,21 +44,9 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="lg:col-span-5">
-            <div className="relative mx-auto aspect-square max-w-md">
-              <div className="absolute inset-0 rounded-[40%_60%_55%_45%/50%_45%_55%_50%] bg-teal/40" aria-hidden />
-              <div className="absolute inset-6 rounded-[55%_45%_60%_40%/45%_55%_45%_55%] bg-coral/30" aria-hidden />
-              <Image
-                src="/MascotWithoutBG.png"
-                alt="Play Panda mascot"
-                fill
-                priority
-                sizes="(max-width: 1024px) 80vw, 40vw"
-                className="object-contain animate-bob drop-shadow-xl"
-              />
-              <span className="absolute -top-2 right-4 rotate-6 rounded-pill bg-yellow px-4 py-1.5 font-display font-black text-ink shadow-chunk animate-wobble">
-                Come play!
-              </span>
+          <div className="order-1 lg:order-2 lg:col-span-5">
+            <div className="animate-stage-in hero-seq" style={{ "--i": 2 } as React.CSSProperties}>
+              <HeroPandaStage />
             </div>
           </div>
         </div>

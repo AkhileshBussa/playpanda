@@ -71,7 +71,7 @@ export function Location() {
             <dl className="mt-6 space-y-2 text-ink/80">
               <div className="flex gap-2">
                 <dt className="font-display font-bold">Hours:</dt>
-                <dd>{BUSINESS.openingHours}</dd>
+                <dd>{BUSINESS.openingHoursDisplay}</dd>
               </div>
               <div className="flex gap-2">
                 <dt className="font-display font-bold">Parking &amp; entry:</dt>

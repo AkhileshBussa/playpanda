@@ -7,6 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { EnquiryForm } from "@/components/EnquiryForm";
 import { StickyContactBar } from "@/components/StickyContactBar";
 import { Bunting, ScallopBottom } from "@/components/PartyDecor";
+import { Reveal } from "@/components/Reveal";
 import {
   WHATSAPP_BIRTHDAY_LINK,
   MAPS_LINK,
@@ -71,20 +72,20 @@ export default function BirthdayParties() {
       {/* Hero */}
       <section className="relative bg-coral text-cream overflow-hidden">
         <Bunting />
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 text-center">
-          <p className="font-display font-bold uppercase tracking-widest text-cream/80 text-sm">
+        <Reveal className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pt-14 pb-24 text-center">
+          <p className="reveal-item font-display font-bold uppercase tracking-widest text-cream/80 text-sm" style={{ "--i": 0 } as React.CSSProperties}>
             Play Panda Parties
           </p>
-          <h1 className="mt-3 font-display font-black text-5xl sm:text-6xl lg:text-7xl leading-[1.02]">
+          <h1 className="reveal-item mt-3 font-display font-black text-5xl sm:text-6xl lg:text-7xl leading-[1.02]" style={{ "--i": 1 } as React.CSSProperties}>
             Birthday Packages
           </h1>
-          <p className="mt-4 font-display font-bold text-xl sm:text-2xl text-cream/95">
+          <p className="reveal-item mt-4 font-display font-bold text-xl sm:text-2xl text-cream/95" style={{ "--i": 2 } as React.CSSProperties}>
             A big celebration inside a little one&apos;s world.
           </p>
-          <p className="mt-5 inline-flex items-center gap-2 rounded-pill bg-cream/15 px-5 py-2 font-display font-bold">
+          <p className="reveal-item mt-5 inline-flex items-center gap-2 rounded-pill bg-cream/15 px-5 py-2 font-display font-bold" style={{ "--i": 3 } as React.CSSProperties}>
             🎂 One price for your whole group, kids &amp; adults included
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
+          <div className="reveal-item mt-8 flex flex-wrap justify-center gap-3" style={{ "--i": 4 } as React.CSSProperties}>
             <a
               href={WHATSAPP_BIRTHDAY_LINK}
               target="_blank"
@@ -100,7 +101,7 @@ export default function BirthdayParties() {
               Book a Visit
             </a>
           </div>
-        </div>
+        </Reveal>
         <ScallopBottom className="text-cream" />
       </section>
 
