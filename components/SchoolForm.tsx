@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { WHATSAPP_NUMBER } from "@/lib/links";
+import { trackEvent, CONVERSION_EVENTS } from "@/lib/analytics";
 
 // Composes a pre-filled WhatsApp message to the main number (no backend).
 export function SchoolForm() {
@@ -23,6 +24,7 @@ export function SchoolForm() {
       `Approx. students: ${get("students")}`,
     ].join("\n");
 
+    trackEvent(CONVERSION_EVENTS.formSubmit, { form_name: "school_enquiry" });
     window.open(
       `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
       "_blank",

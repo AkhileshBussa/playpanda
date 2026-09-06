@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { FRANCHISE_WHATSAPP_NUMBER } from "@/lib/links";
+import { trackEvent, CONVERSION_EVENTS } from "@/lib/analytics";
 
 // Composes a pre-filled WhatsApp message to the franchise contact (no backend).
 export function FranchiseForm() {
@@ -25,6 +26,7 @@ export function FranchiseForm() {
       `Message: ${get("message")}`,
     ].join("\n");
 
+    trackEvent(CONVERSION_EVENTS.formSubmit, { form_name: "franchise_enquiry" });
     window.open(
       `https://wa.me/${FRANCHISE_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`,
       "_blank",
