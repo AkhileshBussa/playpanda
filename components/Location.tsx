@@ -15,6 +15,22 @@ const locationFaqs = [
     a: "Play Panda's nine zones span toddlers to older children. Tiny Trails and The Bubble Pond suit the smallest ones, while Cute Climbers and Little Explorers give bigger kids room to burn off energy.",
   },
   {
+    q: "Is Play Panda an indoor playground, a soft play area or a game zone?",
+    a: "Play Panda is an indoor play zone rather than an arcade or a game zone. Across 10,000 sq. ft. there are nine themed zones covering soft play, sensory play, pretend play, building, climbing and water play. There are no screens and no arcade machines anywhere in the venue.",
+  },
+  {
+    q: "Is there a kids play zone near me in south-west Hyderabad?",
+    a: `Play Panda is on Kismatpur Road in Bandlaguda Jagir, which puts it within an easy drive of ${BUSINESS.nearbyAreas}. It's the nearest large indoor play area for most families on that side of the city, and parking is free.`,
+  },
+  {
+    q: "Is Play Panda suitable for toddlers and 1-year-olds?",
+    a: "Yes. Tiny Trails is built for the smallest children to crawl, toddle and explore at their own pace, and The Bubble Pond ball pit suits little ones too. Older children have Cute Climbers, Little Explorers and the Water Zone in the same space.",
+  },
+  {
+    q: "How much does it cost to visit Play Panda?",
+    a: "One entry covers all nine play zones for the session. Rates vary between weekdays, weekends and seasonal offers, so Play Panda shares current pricing directly, message +91 90638 17084 on WhatsApp for today's rates and party quotes.",
+  },
+  {
     q: "Is there parking?",
     a: "Yes. Play Panda has free parking and a pram-friendly entrance.",
   },

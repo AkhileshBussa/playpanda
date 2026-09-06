@@ -6,6 +6,7 @@ import { WHATSAPP_LINK } from "@/lib/links";
 const links = [
   { href: "/#zones", label: "Play" },
   { href: "/birthday-parties", label: "Birthdays" },
+  { href: "/pricing", label: "Prices" },
   { href: "/#food", label: "Food" },
   { href: "/school-partnerships", label: "Schools" },
   { href: "/blog", label: "Blog" },

@@ -23,16 +23,29 @@ export function Reveal({ children, className = "", id, as = "div", style, ...res
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    if (
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
+      typeof IntersectionObserver === "undefined"
+    ) {
       setInView(true);
       return;
     }
+    let observed = false;
     const io = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
+      ([entry]) => {
+        observed = true;
+        setInView(entry.isIntersecting);
+      },
       { threshold: 0.01, rootMargin: "0px 0px -12% 0px" },
     );
     io.observe(el);
-    return () => io.disconnect();
+    const fallback = window.setTimeout(() => {
+      if (!observed) setInView(true);
+    }, 1200);
+    return () => {
+      window.clearTimeout(fallback);
+      io.disconnect();
+    };
   }, []);
 
   const Comp = as as "div";
