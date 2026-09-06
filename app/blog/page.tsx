@@ -6,6 +6,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
 import { POSTS } from "@/lib/blog";
+import { Reveal } from "@/components/Reveal";
 
 export const metadata: Metadata = {
   title: "Play Panda Blog · Kids Play Zones in Hyderabad",
@@ -26,23 +27,24 @@ export default function BlogIndex() {
       <JsonLd data={breadcrumbSchema(crumbs)} />
 
       <section className="py-14 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <Reveal className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Breadcrumbs items={crumbs} />
-          <h1 className="mt-5 font-display font-black text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
+          <h1 className="reveal-item mt-5 font-display font-black text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]" style={{ "--i": 0 } as React.CSSProperties}>
             The Play Panda <span className="text-coral">Blog</span>
           </h1>
-          <p className="mt-5 text-lg text-ink/70 max-w-2xl">
+          <p className="reveal-item mt-5 text-lg text-ink/70 max-w-2xl" style={{ "--i": 1 } as React.CSSProperties}>
             Honest, useful guides for Hyderabad parents, picking a kids play zone,
             indoor play days, screen-free fun, and the most out of a visit to Play
             Panda in Bandlaguda Jagir.
           </p>
 
           <div className="mt-12 grid sm:grid-cols-2 gap-6">
-            {POSTS.map(({ meta }) => (
+            {POSTS.map(({ meta }, i) => (
               <Link
                 key={meta.slug}
                 href={`/blog/${meta.slug}`}
-                className="group block bg-cream rounded-chunk p-7 border border-ink/5 shadow-chunk hover:shadow-chunkHover transition-shadow"
+                className="reveal-item group block bg-cream rounded-chunk p-7 border border-ink/5 shadow-chunk hover:shadow-chunkHover transition-shadow"
+                style={{ "--i": 2 + i } as React.CSSProperties}
               >
                 <h2 className="font-display font-black text-2xl text-ink leading-tight group-hover:text-coral transition-colors">
                   {meta.title}
@@ -54,7 +56,7 @@ export default function BlogIndex() {
               </Link>
             ))}
           </div>
-        </div>
+        </Reveal>
       </section>
 
       <Footer />

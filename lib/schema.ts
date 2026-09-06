@@ -147,6 +147,7 @@ export function localBusinessSchema() {
       })),
     }),
     hasMap: "https://maps.app.goo.gl/uujpj3phdAMPyr3S7",
+    openingHours: BUSINESS.openingHours,
     areaServed: "Hyderabad",
     sameAs: [INSTAGRAM_LINK],
   };

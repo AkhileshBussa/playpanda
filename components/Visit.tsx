@@ -6,28 +6,29 @@ import {
   PHONE_DISPLAY,
   PHONE_TEL,
 } from "@/lib/links";
+import { Reveal } from "./Reveal";
 
 export function Visit() {
   return (
-    <section id="visit" className="py-20 sm:py-28">
+    <Reveal as="section" id="visit" className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <header className="max-w-2xl">
-          <p className="font-display font-bold text-purple uppercase tracking-widest text-sm">
+          <p className="reveal-item font-display font-bold text-purple uppercase tracking-widest text-sm" style={{ "--i": 0 } as React.CSSProperties}>
             Come visit
           </p>
-          <h2 className="mt-3 font-display font-black text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]">
+          <h2 className="reveal-item mt-3 font-display font-black text-4xl sm:text-5xl lg:text-6xl text-ink leading-[1.05]" style={{ "--i": 1 } as React.CSSProperties}>
             Find us. Call us.
             <br />
             <span className="text-green">Or just walk in.</span>
           </h2>
-          <p className="mt-5 text-lg text-ink/70 max-w-xl">
+          <p className="reveal-item mt-5 text-lg text-ink/70 max-w-xl" style={{ "--i": 2 } as React.CSSProperties}>
             We&apos;d love to show you around. Scan a QR, drop us a WhatsApp, or
             give us a ring.
           </p>
         </header>
 
         <div className="mt-12 grid md:grid-cols-2 gap-6">
-          <article className="bg-cream rounded-chunk p-7 sm:p-8 shadow-chunk border border-ink/5">
+          <article className="reveal-item bg-cream rounded-chunk p-7 sm:p-8 shadow-chunk border border-ink/5" style={{ "--i": 3 } as React.CSSProperties}>
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h3 className="font-display font-black text-2xl text-ink">
@@ -60,7 +61,7 @@ export function Visit() {
             </div>
           </article>
 
-          <article className="bg-cream rounded-chunk p-7 sm:p-8 shadow-chunk border border-ink/5">
+          <article className="reveal-item bg-cream rounded-chunk p-7 sm:p-8 shadow-chunk border border-ink/5" style={{ "--i": 4 } as React.CSSProperties}>
             <div className="flex items-start justify-between gap-4">
               <div>
                 <h3 className="font-display font-black text-2xl text-ink">
@@ -97,6 +98,6 @@ export function Visit() {
           </article>
         </div>
       </div>
-    </section>
+    </Reveal>
   );
 }
